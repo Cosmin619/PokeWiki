@@ -1,0 +1,29 @@
+// @use "./stylings" as *;
+
+.mat-toolbar.mat-primary {
+    // background: $brand-color;
+    background: red;
+    color: #fff;  
+    height: 70px;
+  }
+
+  .mat-button{
+    font-size: 25px;
+    line-height: 70px;
+    border-radius: 0px;
+  }
+
+  .spacer{
+    flex: 1 1 auto;
+  }
+
+  .search-by-text{
+    border-radius: 25px;
+    text-align: center;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .logo-image{
+    padding-right: 16px;
+  }
