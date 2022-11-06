@@ -1,31 +1,34 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
-import { HomePageComponent } from './home-page/home-page.component';
-import { DetailPageComponent } from './detail-page/detail-page.component';
-import { CreateProductPageComponent } from './create-product-page/create-product-page.component';
+import { PokemonDetailsPageComponent } from './pokemon-details-page/pokemon-details-page.component';
+import { ProductPageComponent } from './product-page/product-page.component';
 import { ProductListPageComponent } from './product-list-page/product-list-page.component';
-import { ListOfPokemonsComponent } from './list-of-pokemons/list-of-pokemons.component';
+import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { ItemViewComponent } from './item-view/item-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomePageComponent,
-    DetailPageComponent,
-    CreateProductPageComponent,
+    PokemonDetailsPageComponent,
+    ProductPageComponent,
     ProductListPageComponent,
-    ListOfPokemonsComponent
+    PokemonListComponent,
+    ItemViewComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,11 @@ import { NgxPaginationModule } from 'ngx-pagination';
     MatIconModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    MatInputModule,
+    MatSelectModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,8 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseURL: 'https://pokeapi.co/api/v2/pokemon',
+  restAPI: 'http://localhost:8080/endpoint'
 };
+
 
 /*
  * For easier debugging in development mode, you can import the following file

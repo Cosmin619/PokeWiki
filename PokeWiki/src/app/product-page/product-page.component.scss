@@ -1,0 +1,76 @@
+@import 'src/stylings/colors.scss';
+
+.input-form{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:40%;
+    margin: 100px;
+  }
+  
+  .input-form label {
+    display: block;
+    padding: 6px;
+  }
+
+.input-form ::ng-deep .mat-label{
+    font: 100px;
+  }
+
+  ::ng-deep .mat-form-field {
+    .mat-form-field-label {
+        color: red;
+    }
+    .mat-form-field-ripple {
+        background-color: red;
+    }
+}
+
+::ng-deep .mat-form-field.mat-focused {
+    .mat-form-field-label {
+        color: $primary-color;
+    }
+    .mat-form-field-ripple {
+        background-color: $primary-color;
+    }
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex{
+    background-color: transparent;
+    padding: 1px !important;
+}
+
+::ng-deep .mat-form-field{
+    font-size: 20px;
+}
+
+::ng-deep .mat-form-field-infix{
+    width: 300px !important;
+    height: 30px !important;
+}
+
+textarea.desc{
+    width: 500px !important;
+    height: 30px !important;
+}
+
+::ng-deep .mat-input-element {
+    font-size: 30px !important;
+}
+
+.leftm{
+    margin-left: 100px;
+}
+
+.mat-icon{
+    color: $primary-color;
+}
+
+.btn-prod{
+    background-color: $primary-color;
+    color: $secondary-color;
+    margin-left: 5%;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+}

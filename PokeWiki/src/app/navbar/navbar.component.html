@@ -3,8 +3,8 @@
     
     <a [routerLinkActive]="'active'" mat-button routerLink="home">Home</a>
     <a [routerLinkActive]="'active'" mat-button routerLink="detail">Detail</a>
-    <a *ngIf="dataService.getIsAdmin()" [routerLinkActive]="'active'" mat-button routerLink="createproduct">Create Product</a>
-    <a *ngIf="dataService.getIsAdmin()" [routerLinkActive]="'active'" mat-button routerLink="productlist">Product List</a>
+    <a *ngIf="adminDataService.getIsAdmin()" [routerLinkActive]="'active'" mat-button routerLink="createproduct">Create Product</a>
+    <a *ngIf="adminDataService.getIsAdmin()" [routerLinkActive]="'active'" mat-button routerLink="productlist">Product List</a>
 
     <div class="spacer"></div>
 

@@ -1,0 +1,54 @@
+<form [formGroup]="addProduct" novalidate class="form">
+    <div class="input-form">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Name</mat-label>
+            <input type="text" formControlName="name" value="!" matInput>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width leftm" appearance="fill">
+            <mat-label>Price</mat-label>
+            <input type="number" formControlName="price" matInput>
+            <mat-icon matSuffix>$</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width leftm" appearance="fill">
+            <mat-label>Description</mat-label>
+            <textarea type="text" formControlName="description" matInput></textarea>
+        </mat-form-field>
+    </div>
+
+    <div class="input-form">
+        <mat-form-field appearance="fill">
+            <mat-label>Category</mat-label>
+            <mat-select formControlName="category">
+                <mat-option value="plushies">Plushies</mat-option>
+                <mat-option value="tcg">TCG</mat-option>
+                <mat-option value="toys">Toys</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width leftm" appearance="fill">
+            <mat-label>Image URL</mat-label>
+            <input type="url" formControlName="imageURL" matInput>
+        </mat-form-field>
+
+        <div class="leftm">
+            <mat-icon aria-hidden="false" fontIcon="phone"></mat-icon>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Phone</mat-label>
+                <input type="tel" formControlName="phone" matInput>
+            </mat-form-field>
+    
+            <mat-form-field appearance="fill">
+                <mat-label>Select</mat-label>
+                <mat-select formControlName="select">
+                    <mat-option value="landline">Landline</mat-option>
+                    <mat-option value="mobile">Mobile</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+
+    <button class="btn-prod" type="submit" (click)="onSubmit()">Add new product</button>
+</form>

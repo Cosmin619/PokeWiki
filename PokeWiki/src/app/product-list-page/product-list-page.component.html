@@ -1,1 +1,7 @@
-<img src="assets/images/PikaInProgress.jpg" alt="progress" class="progress">
+<div class="display-grid">
+    <div class="box" 
+    *ngFor="let product of products">
+    <h1>{{product.name}}</h1>
+    <img [src]="product.imageURL">
+    </div>
+</div>

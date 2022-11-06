@@ -1,9 +1,8 @@
-// @use "./stylings" as *;
+@import 'src/stylings/colors.scss';
 
 .mat-toolbar.mat-primary {
-    // background: $brand-color;
-    background: red;
-    color: #fff;  
+    background: $primary-color;
+    color: $secondary-color;  
     height: 70px;
   }
 
