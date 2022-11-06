@@ -1,0 +1,24 @@
+.display-grid{
+    display: grid;
+    grid-gap: 16px;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(19%,1fr));
+}
+
+.display-grid .box{
+    width: 100%;
+    height: 300px;
+    box-shadow: 1px 2px 5px $primary-color;
+    display: grid;
+    text-align: center;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.display-grid .box img{
+    height: 200px;
+    display: block;
+    margin: auto;
+}
