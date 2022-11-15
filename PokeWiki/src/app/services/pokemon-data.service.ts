@@ -24,13 +24,24 @@ export class PokemonDataService {
     // }));
   }
 
-  getPokemonByName(name: string)/*: Observable<Pokemon>*/{
+  getPokemonByName(name: string){
     return this.http.get(`${this.baseURL}/${name}`);
-    // .pipe(
-    //   map((x: any)=>{
-    //     return x.map((y: any)=>new Pokemon().serialize(y));
-    //   })
-    // );
+  }
+
+  getPokemonStatsById(id: number) {
+    return this.http.get<any>(`https://pokeapi.co/api/v2/pokemon/${id}`);
+  }
+
+  getPokemonById(id: number){
+    return this.http.get<any>(`https://pokeapi.co/api/v2/pokemon-form/` +id);
+  }
+
+  getPokemonSpeciesById(id: number) {
+    return this.http.get<any>(`https://pokeapi.co/api/v2/pokemon-species/${id}`);
+  }
+
+  getPokemonGenderById(id: number) {
+    return this.http.get<any>(`https://pokeapi.co/api/v2/gender/${id}`);
   }
 
   // loadPokemons(limit:number, offset: number): void{

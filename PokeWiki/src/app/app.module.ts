@@ -18,7 +18,7 @@ import { ProductPageComponent } from './product-page/product-page.component';
 import { ProductListPageComponent } from './product-list-page/product-list-page.component';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { ItemViewComponent } from './item-view/item-view.component';
+import { PokemonLoadingScreenComponent } from './pokemon-loading-screen/pokemon-loading-screen.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,7 @@ import { ItemViewComponent } from './item-view/item-view.component';
     ProductPageComponent,
     ProductListPageComponent,
     PokemonListComponent,
-    ItemViewComponent
+    PokemonLoadingScreenComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PokemonDataService } from '../services/pokemon-data.service';
 import { Pokemon } from '../shared/pokemon-view';
 
@@ -8,16 +9,15 @@ import { Pokemon } from '../shared/pokemon-view';
   styleUrls: ['./pokemon-list.component.scss']
 })
 export class PokemonListComponent implements OnInit {
-  pokemons: /*Pokemon[] = []*/any[] = [];
+  pokemons: any[] = [];
   page = 1;
   totalPokemons!: number;
 
-  constructor(private pokemonDataService: PokemonDataService) { }
+  constructor(private pokemonDataService: PokemonDataService, private router: Router) { }
 
   ngOnInit(): void {
     this.getPokemons();
   }
-
 //pokemon card
 public getPokemons(){
     this.pokemonDataService.getPokemons(30, (this.page - 1) * 30)

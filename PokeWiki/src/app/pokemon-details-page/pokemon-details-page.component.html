@@ -1,1 +1,50 @@
-<p>detail-page works!</p>
+<div class="pokemon-header bg-{{pokemonType}}">
+    {{pokemon.name}}
+</div>
+
+<div class="wrapper">
+    <!-- <img class="box pokemon-img" src="{{pokemonImg}}" alt="Pokemon"> -->
+    <img class="box pokemon-img" src="https://projectpokemon.org/images/normal-sprite/{{pokemon.name}}.gif" alt="pokemon.name">
+    <div class="box types-of-pokemon">
+        <div class="first-type bg-{{pokemonType}}">
+            {{pokemonType}}
+        </div>
+        <div class="second-type bg-{{pokemonTypeSecond}}">
+            {{pokemonTypeSecond}}
+        </div>
+    </div>
+    <div class="box pokemon-nr">#{{pokemon.id}}</div>
+    <div class="box-stats">
+        <div *ngFor="let currentPokemon of pokemonStats">
+            <div class="stat-name">
+                {{currentPokemon['stat']['name']}}
+            </div> 
+            <div class="stat-value stats-percentage">
+                <div class="progress-background">
+                    <div class="progress-bar bg-{{pokemonType}}" [style.width.%]="currentPokemon['base_stat']">{{currentPokemon['base_stat']}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p class="seed-pokemon mini-title">Seed Pokemon</p>
+
+<div class="seed-pokemon">
+    {{this.pokemonFlavorEntries['9'].flavor_text}}
+</div>
+
+<div class="pokemon-mini-header bg-{{pokemonType}}">
+    Profile
+</div>
+
+
+<div class="pokemon-mini-header bg-{{pokemonType}}">
+    Evolution
+</div>
+
+
+
+<div class="pokemon-mini-header bg-{{pokemonType}}">
+    Damage When Attacked
+</div>

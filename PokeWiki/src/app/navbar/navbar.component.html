@@ -8,5 +8,7 @@
 
     <div class="spacer"></div>
 
+    <button (click)="handleLogIn()" class="log-button" *ngIf="isAdmin===false">Log in</button> 
+    <button (click)="handleLogOut()" class="log-button" *ngIf="isAdmin===true">Log out</button> 
     <input type="text" placeholder="Search Pokemon..." class="search-by-text"/>
   </mat-toolbar>

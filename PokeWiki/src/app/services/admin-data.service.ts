@@ -14,6 +14,6 @@ export class AdminDataService {
   }
 
   setIsAdmin(value: boolean){
-    localStorage.setItem('admin', value ? 'true' : 'false');
+    localStorage.setItem('admin', value===true ? 'true' : 'false');
   }
 }
